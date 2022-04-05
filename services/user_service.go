@@ -9,8 +9,8 @@ import (
 
 type userService struct{}
 
-type userServiceInterface interface {
-	GetUserById(id int) (dto.UserDto, e.ApiError)
+type userServiceInterface interface { //nombre del metodo, que .. todo lo que va a devolver mi servicio es en DTO (ej: user)
+	GetUserById(id int) (dto.UserDto, e.ApiError) 
 	GetUsers() (dto.UsersDto, e.ApiError)
 	InsertUser(userDto dto.UserDto) (dto.UserDto, e.ApiError)
 }
@@ -25,8 +25,8 @@ func init() {
 
 func (s *userService) GetUserById(id int) (dto.UserDto, e.ApiError) {
 
-	var user model.User = userCliente.GetUserById(id)
-	var userDto dto.UserDto
+	var user model.User = userCliente.GetUserById(id)// crea una var user pidiendole los datos a la bd
+	var userDto dto.UserDto //Lo que tengo que devolver
 
 	if user.Id == 0 {
 		return userDto, e.NewBadRequestApiError("user not found")

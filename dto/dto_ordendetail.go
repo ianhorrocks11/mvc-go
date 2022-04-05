@@ -7,7 +7,7 @@ type OrderdetailDto struct {
 	Product ProductDto `json: "product"`
 }
 
-type OrderdetailDto []OrderdetailDto
+type OrderdetailsDto []OrderdetailDto
 
 
 

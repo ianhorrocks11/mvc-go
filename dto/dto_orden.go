@@ -7,7 +7,7 @@ type OrderDto struct {
 	OrderdetailDto OrderdetailDto `json: "detail"`
 }
 
-type OrderDto []OrderDto
+type OrdersDto []OrderDto
 
 
 // usuario, total de orden int, status
