@@ -17,5 +17,5 @@ func mapUrls() {
 	router.GET("/user", userController.GetUsers)
 	router.POST("/user", userController.UserInsert)
 
-	log.Info("Finishing mappings configurations")
+	log.Info("Finishing mappings configurations") // igual que starting server
 }
