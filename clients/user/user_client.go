@@ -1,3 +1,4 @@
+// clase DAO de user. La que se conecta con la Base de datos
 package product
 
 import (
